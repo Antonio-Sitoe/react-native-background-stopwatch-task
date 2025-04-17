@@ -11,9 +11,11 @@ import {
 import notifee, { AndroidColor, EventType } from '@notifee/react-native'
 import * as Linking from 'expo-linking'
 import { useTimerStore } from './store'
+import { useExpoRouter } from 'expo-router/build/global-state/router-store'
 
 let i = 0
 export default function App() {
+  const router = useExpoRouter()
   const {
     isRunning,
     time,
@@ -200,6 +202,12 @@ export default function App() {
           <Text style={styles.buttonText}>Parar</Text>
         </TouchableOpacity>
       </View>
+      <TouchableOpacity
+        style={[styles.button]}
+        onPress={() => router.push('/two')}
+      >
+        <Text style={styles.buttonText}>Parar</Text>
+      </TouchableOpacity>
     </View>
   )
 }
