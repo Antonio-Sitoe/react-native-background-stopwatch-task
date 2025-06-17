@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["StopwatchModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.stopwatch.StopwatchModule"]
+  }
+}
